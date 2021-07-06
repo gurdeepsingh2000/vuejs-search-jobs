@@ -63,16 +63,20 @@ new Vue(
                         if(this.starred.includes(index)){
                             return "yellow-star"
                         }else{
-                            return "white-star"
+                            return "black-star"
                         }
                     },
                     applyJob: function(index){
                         if(!this.applied.includes(index)){
-                            let star_starred = this.starred.indexOf(index);
                             this.applied.push(index)
-                            this.starred.splice(star_starred, 1)
                         }
+                    },
+                    removeStar: function (index){
+                        if(this.applied.includes(index)){
+                        let star_starred = this.starred.indexOf(index);
+                        this.starred.splice(star_starred, 1)
                     }
+                }
             }
     }
 );
