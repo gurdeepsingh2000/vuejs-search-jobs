@@ -69,6 +69,7 @@ new Vue(
                     applyJob: function(index){
                         if(!this.applied.includes(index)){
                             this.applied.push(index)
+                            this.starred.splice(index,1)
                         }
                     }
             }
