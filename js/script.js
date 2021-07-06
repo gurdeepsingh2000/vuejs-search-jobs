@@ -48,16 +48,35 @@ new Vue(
                 contract: 'Full Time'
                 }   
             ],
-            
+
             starred: [1, 2, 3],
             applied: [4, 5]
 
         },
                 methods: {
-                    
+                    pushStar: function(index){
+                        if(!this.starred.includes(index)){
+                            this.starred.push(index)
+                        }
+                    }, 
+                    bg_Star: function(index){
+                        if(this.starred.includes(index)){
+                            return "yellow-star"
+                        }else{
+                            return "white-star"
+                        }
+                    }
             }
     }
 );
 
 // Milestone 1
 // Mostriamo tutti gli annunci in una lista, con una grafica molto elementare.
+
+
+
+
+
+// Identificare il preferito
+// Identifichiamo nella lista gli annunci di lavoro preferiti, con un simbolo che si attiva/colora solo se quell’annuncio è tra i preferiti (per esempio, una stella).
+
