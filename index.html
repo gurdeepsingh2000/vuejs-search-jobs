@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Jobs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="job-page">
+        <ul v-for = 'ad_post in jobs'class="job-ads">
+            <li>{{ad_post.company}}</li>
+            <li>{{ad_post.position}}</li>
+            <li>{{ad_post.description}}</li>
+            <li>{{ad_post.created_at}}</li>
+            <li>{{ad_post.city}}</li>
+            <li>{{ad_post.contract}}</li>
+
+        </ul>
+
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
