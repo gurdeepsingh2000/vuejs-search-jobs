@@ -20,6 +20,9 @@
                 <i v-if="!starred.includes(index)" :class= 'bg_Star(index)' @click ='pushStar(index)' class="far fa-star"></i> 
                 <i class="fas fa-star" v-else :class= 'bg_Star(index)' @click ='pushStar(index)'></i>
             </li>
+            
+
+            <li><button v-if="!applied.includes(index)" @click = 'applyJob(index)' >APPLY</button> <button v-else>APPILED</button></li>
             <li>{{ad_post.company}}</li>
             <li>{{ad_post.position}}</li>
             <li>{{ad_post.description}}</li>

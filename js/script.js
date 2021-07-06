@@ -65,6 +65,11 @@ new Vue(
                         }else{
                             return "white-star"
                         }
+                    },
+                    applyJob: function(index){
+                        if(!this.applied.includes(index)){
+                            this.applied.push(index)
+                        }
                     }
             }
     }
